@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: home_video_log
+    password: home_video_log
+    url: jdbc:mysql://localhost:3306/home_video_log
+    
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+         format_sql: true
+    
+  sql:
+    init:
+      mode: always
+      
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+         expiration: 604800000 # 7 days
+         
+spring-doc:
+   swagger-ui:
+      tagsSorter: alpha
+         
